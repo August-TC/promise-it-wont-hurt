@@ -7,5 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "august",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "es6-promise": "^4.1.1"
+  }
 }

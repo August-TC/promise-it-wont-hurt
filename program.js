@@ -1,12 +1,10 @@
 'use strict'
 
-function output(str) {
-	console.log(str);
-}
+var promise = new Promise(
+	function (fulfill, reject) {
+		setTimeout(function () {
+			fulfill('FULFILLED!')
+		},300);
+	});
 
-/**
- *  setTimeout(code, ms)
- *  code: JavaScript codes in a string
- *  ms: delay time
- */
-setTimeout(output,300,"TIMED OUT!");
+promise.then(console.log);
