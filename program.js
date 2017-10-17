@@ -2,9 +2,13 @@
 
 var promise = new Promise(
 	function (fulfill, reject) {
-		setTimeout(function () {
-			fulfill('FULFILLED!')
-		},300);
+		fulfill('PROMISE VALUE')
+		reject(new Error('I DID NOT FIRE'));
 	});
 
-promise.then(console.log);
+function onReject(error) {
+	console.log(error.message);
+}
+
+promise.then(console.log, onReject);
+console.log('MAIN PROGRAM');
